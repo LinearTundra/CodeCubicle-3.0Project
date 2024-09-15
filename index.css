@@ -1,5 +1,10 @@
+
 body {
-    background: radial-gradient(circle at -8.9% 51.2%, rgb(255, 124, 0) 0%, rgb(255, 124, 0) 15.9%, rgb(255, 163, 77) 15.9%, rgb(255, 163, 77) 24.4%, rgb(19, 30, 37) 24.5%, rgb(19, 30, 37) 66%);
+    background: radial-gradient(circle at 100% 51.2%, rgb(255, 124, 0) 0%, rgb(255, 124, 0) 15.9%, rgb(255, 163, 77) 15.9%, rgb(255, 163, 77) 24.4%, rgb(19, 30, 37) 24.5%, rgb(19, 30, 37) 66%);
+}
+
+#SearchResultText{
+  color:white;
 }
 
 /* black bg color to the top navigation bar*/
@@ -16,7 +21,10 @@ body {
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+    background-color: #FFE282;
     font-size: 17px;
+    border-radius: 10px;
+    margin-right:1em ;
 }
 /* change the color of links on hover*/
 .topnav a:hover {
@@ -25,14 +33,13 @@ body {
 }
 /*style "active" element to highlight the current page*/
 .topnav a.active {
-    background-color: #2196F3;
+    background-color: #F3161E;
     color: white;
 }
 /* style the search box inside the navigation bar*/
 .topnav input[type=text] {
     float: right;
     padding: 6px;
-    border: none;
     margin-top: 8px;
     margin-right: 16px;
     font-size: 17px;
@@ -231,3 +238,206 @@ input:-webkit-autofill:active {
     width: 10em;
     border: 5px solid;
   }
+
+
+.Title{
+    font-family:Verdana, Geneva, Tahoma, sans-serif,Impact, Haettenschweiler;
+    text-align: center;
+    font-size: 100px;
+    color: #3ea67c;
+
+}
+.note{
+    color: #949faa;
+    font-size: 35px;
+    font-family: 'Impact';
+}
+
+.ctr {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 2em;
+}
+
+/* Card */
+.card {
+    cursor: pointer;
+}
+.card_back {
+    position: absolute;
+    width: 17em;
+    height: 6em;
+    background-color: rgba(30, 31, 38, 0.575);
+    border-radius: 7px;
+    margin-top: 0;
+    margin-left: 0.7em;
+    z-index: -1;
+}  
+.main:hover .card_back {
+    margin-top: -6.25em;
+    margin-left: 0em;
+    scale: 1.1;
+    height: 15.25em;
+    cursor: pointer;
+}  
+.text {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 1em;
+    margin-left: 2em;
+    font-family: Montserrat;
+    color: white;
+}
+.text_m {
+    font-weight: bold;
+    font-size: 0.9em;
+}
+.text_s {
+    font-size: 0.7em;
+}
+.btns {
+    margin-left: 1em;
+    display: flex;
+    gap: 0.5em;
+    transition: .2s ease-in-out;
+}
+.likes {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5em;
+    height: 1.4em;
+    border-radius: 4px;
+    margin-top: -0.5em;
+    opacity: 0;
+    background-color: #444857;
+    transition: .2s ease-in-out;
+}
+.likes_text {
+    font-family: Montserrat;
+    font-size: 0.8em;
+    margin-left: 0.25em;
+    color: white;
+}
+.likes_svg {
+    width: 12px;
+    height: 12px;
+    fill: white;
+}
+.likes:hover {
+    background-color: #5A5F73;
+    cursor: pointer;
+}
+.comments {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5em;
+    height: 1.4em;
+    border-radius: 4px;
+    margin-top: -0.5em;
+    opacity: 0;
+    background-color: #444857;
+    transition: .24s ease-in-out;
+}
+.comments_text {
+    font-family: Montserrat;
+    font-size: 0.8em;
+    margin-left: 0.25em;
+    color: white;
+}
+.comments_svg {
+    width: 12px;
+    height: 12px;
+    fill: white;
+}
+.comments:hover {
+    /*background-color: #5A5F73;*/
+    cursor: pointer;
+}
+.main:hover .likes {
+    margin-top: 0.5em;
+    opacity: 1;
+}
+.main:hover .comments {
+    margin-top: 0.5em;
+    opacity: 1;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* * {
+  margin: 0;
+} */
+
+/* .main {
+  width: 90%;
+  max-width: 1536px;
+  margin-inline: auto;
+  position: relative;
+  height: 100px;
+
+  overflow: hidden;
+  mask-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 1) 20%,
+    rgba(0, 0, 0, 1) 80%,
+    rgba(0, 0, 0, 0)
+  );
+} */
+
+@keyframes scrollLeft {
+  to {
+    left: -200px;
+  }
+}
+
+.card {
+  width: 200px;
+  height: 100px;
+  /* background-color: red; */
+  border-radius: 6px;
+  position: absolute;
+  left: max(calc(200px * 6), 100%);
+  animation-name: scrollLeft;
+  animation-duration: 30s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.item1 {
+  animation-delay: calc(30s / 6 * (6 - 1) * -1);
+}
+
+.item2 {
+  animation-delay: calc(30s / 6 * (6 - 2) * -1);
+}
+
+.item3 {
+  animation-delay: calc(30s /6 * (6 - 3) * -1);
+}
+
+.item4 {
+  animation-delay: calc(30s / 6 * (6 - 4) * -1);
+}
+
+.item5 {
+  animation-delay: calc(30s / 6 * (6 - 5) * -1);
+}
+
+.item6 {
+  animation-delay: calc(30s / 6 * (6 - 6) * -1);
+}
+
+/* .item7 {
+  animation-delay: calc(30s / 8 * (8 - 7) * -1);
+}
+
+.item8 {
+  animation-delay: calc(30s / 8 * (8 - 8) * -1);
+} */

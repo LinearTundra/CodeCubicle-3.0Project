@@ -9,18 +9,17 @@
     </head>
 
     <body>
-        <h1>Questify</h1>
+        <h1 class="Title">Questify</h1>
         
         <div class="topnav">
-            <a class="active"
-            href="home">Home</a>
-            <a href="about.html">About</a>
-            <a href="tutorials">Tutorials</a>
-            <a href="notes.html">Notes</a>
+            <a class="active nav" href="home">Home</a>
+            <a class="nav" href="about.html">About</a>
+            <a class="nav" href="tutorials">Tutorials</a>
+            <a class="nav" href="notes.html">Notes</a>
             <a href="assignments">Assignments</a>
             <form class="form">
                 <label for="Search">
-                    <input class="input" id="Search" type="text" required="" placeholder="Type something..." id="search">
+                    <input class="input" id="Search" type="text" required="" placeholder="Type something...">
                     <div class="fancy-bg"></div>
                     <div class="search">
                         <!-- <svg viewBox="0 0 24 24" aria-hidden="true" class="r-14j79pv r-4qtqp9 r-yyyyoo r-1xvli5t r-dnmrzs r-4wgw6l r-f727ji r-bnwqim r-1plcrui r-lrvibr">
@@ -29,53 +28,203 @@
                             </g>
                         </svg> -->
                     </div>
-                    <button class="close-btn" type="reset">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                            <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
-                        </svg>
-                    </button>
+                    <div>
+                        <button class="btn" type="button" id="EARCH" onclick="search()"><svg viewBox="0 0 24 24" aria-hidden="true" class="svgIcon",>
+                            <g>
+                                <path d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z"></path>
+                            </g>
+                        </button>
+    
+                    </div>
                 </label>
-                <div>
-
-                    <button class="btn",id='SearchButton'>                        <svg viewBox="0 0 24 24" aria-hidden="true" class="svgIcon">
-                        <g>
-                            <path d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z"></path>
-                        </g></button>
-                </div>
             </form>
             <!-- button to enter text in search box -->
-            <p id="SearchResultText"></p>
         </div>
+        <a id="ResponseText" href="assets/Turbine notes-1.pdf" target="_blank">
+        <p id="SearchResultText"></p>
+        </a>
 
         <div class="RecentlyUpdated">
-            <h1>Notes</h1>
-            <div class="notes">
-                <div class="topic">
-                    <h3>Mechanical</h3>
-                    <p>Working of a 2 and 4 stroke SI engine</p>
-                </div>
-                <div class="topic">
-                    <h3>Mechanical</h3>
-                    <p>Hydraulic Lift</p>
-                </div>
-                <div class="topic">
-                    <h3>Mechanical</h3>
-                    <p>Refrigeration</p>
-                </div>
-                <div class="topic">
-                    <h3>Mechanical</h3>
-                    <p>Turbine</p>
-                </div>
-                <div class="topic">
-                    <h3>Electronics</h3>
-                    <p>Zenner Diode</p>
-                </div>
-                <div class="topic">
-                    <h3>Electronics</h3>
-                    <p>BJT and FET</p>
-                </div>
+            <h1 class="note">Notes</h1>
+            <div class="ctr">
+                <a href="assets/Const. working 4 and 2 stroke SI engine.pdf" target="_blank">
+                    <div>
+                        <div class="main">
+                            <div class="card item1" >
+                                <div class="card_back"></div>
+                                <div class="data">
+                                    <div class="text">
+                                        <div class="text_m">Mechanical</div>
+                                        <div class="text_s">Construction of 2 and 4 stroke engine</div>
+                                    </div>
+                                </div>
+                                <div class="btns">
+                                    <div class="likes">
+                                        <svg class="likes_svg" viewBox="-2 0 105 92">
+                                            <path d="M85.24 2.67C72.29-3.08 55.75 2.67 50 14.9 44.25 2 27-3.8 14.76 2.67 1.1 9.14-5.37 25 5.42 44.38 13.33 58 27 68.11 50 86.81 73.73 68.11 87.39 58 94.58 44.38c10.79-18.7 4.32-35.24-9.34-41.71Z"></path>
+                                        </svg>
+                                        <span class="likes_text">22</span>
+                                    </div>
+                                    <div class="comments">
+                                        <svg class="comments_svg" viewBox="-405.9 238 56.3 54.8" title="Comment">
+                                            <path d="M-391 291.4c0 1.5 1.2 1.7 1.9 1.2 1.8-1.6 15.9-14.6 15.9-14.6h19.3c3.8 0 4.4-.8 4.4-4.5v-31.1c0-3.7-.8-4.5-4.4-4.5h-47.4c-3.6 0-4.4.9-4.4 4.5v31.1c0 3.7.7 4.4 4.4 4.4h10.4v13.5z"></path>
+                                        </svg>
+                                        <span class="comments_text">12</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a href="assets/Hydraulic lift.pdf" target="_blank">
+                    <div>
+                        <div class="main">
+                            <div class="card item2">
+                                <div class="card_back"></div>
+                                <div class="data">
+                                    <div class="text">
+                                        <div class="text_m">Mechanical</div>
+                                        <div class="text_s">Hydraulic Lift</div>
+                                    </div>
+                                </div>
+                                <div class="btns">
+                                    <div class="likes">
+                                        <svg class="likes_svg" viewBox="-2 0 105 92">
+                                            <path d="M85.24 2.67C72.29-3.08 55.75 2.67 50 14.9 44.25 2 27-3.8 14.76 2.67 1.1 9.14-5.37 25 5.42 44.38 13.33 58 27 68.11 50 86.81 73.73 68.11 87.39 58 94.58 44.38c10.79-18.7 4.32-35.24-9.34-41.71Z"></path>
+                                        </svg>
+                                        <span class="likes_text">22</span>
+                                    </div>
+                                    <div class="comments">
+                                        <svg class="comments_svg" viewBox="-405.9 238 56.3 54.8" title="Comment">
+                                            <path d="M-391 291.4c0 1.5 1.2 1.7 1.9 1.2 1.8-1.6 15.9-14.6 15.9-14.6h19.3c3.8 0 4.4-.8 4.4-4.5v-31.1c0-3.7-.8-4.5-4.4-4.5h-47.4c-3.6 0-4.4.9-4.4 4.5v31.1c0 3.7.7 4.4 4.4 4.4h10.4v13.5z"></path>
+                                        </svg>
+                                        <span class="comments_text">12</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>   
+                <a href="assets/Refrigeration notes.pdf" target="_blank">
+                    <div>
+                        <div class="main">
+                            <div class="card item3" >
+                                <div class="card_back"></div>
+                                <div class="data">
+                                    <div class="text">
+                                        <div class="text_m">Mechanical</div>
+                                        <div class="text_s">Refrigeration</div>
+                                    </div>
+                                </div>
+                                <div class="btns">
+                                    <div class="likes">
+                                        <svg class="likes_svg" viewBox="-2 0 105 92">
+                                            <path d="M85.24 2.67C72.29-3.08 55.75 2.67 50 14.9 44.25 2 27-3.8 14.76 2.67 1.1 9.14-5.37 25 5.42 44.38 13.33 58 27 68.11 50 86.81 73.73 68.11 87.39 58 94.58 44.38c10.79-18.7 4.32-35.24-9.34-41.71Z"></path>
+                                        </svg>
+                                        <span class="likes_text">22</span>
+                                    </div>
+                                    <div class="comments">
+                                        <svg class="comments_svg" viewBox="-405.9 238 56.3 54.8" title="Comment">
+                                            <path d="M-391 291.4c0 1.5 1.2 1.7 1.9 1.2 1.8-1.6 15.9-14.6 15.9-14.6h19.3c3.8 0 4.4-.8 4.4-4.5v-31.1c0-3.7-.8-4.5-4.4-4.5h-47.4c-3.6 0-4.4.9-4.4 4.5v31.1c0 3.7.7 4.4 4.4 4.4h10.4v13.5z"></path>
+                                        </svg>
+                                        <span class="comments_text">12</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a> 
+                <a href="assets/Turbine notes-1.pdf" target="_blank">
+                    <div>
+                        <div class="main">
+                            <div class="card item4" >
+                                <div class="card_back"></div>
+                                <div class="data">
+                                    <div class="text">
+                                        <div class="text_m">Mechanical</div>
+                                        <div class="text_s">Turbine</div>
+                                    </div>
+                                </div>
+                                <div class="btns">
+                                    <div class="likes">
+                                        <svg class="likes_svg" viewBox="-2 0 105 92">
+                                            <path d="M85.24 2.67C72.29-3.08 55.75 2.67 50 14.9 44.25 2 27-3.8 14.76 2.67 1.1 9.14-5.37 25 5.42 44.38 13.33 58 27 68.11 50 86.81 73.73 68.11 87.39 58 94.58 44.38c10.79-18.7 4.32-35.24-9.34-41.71Z"></path>
+                                        </svg>
+                                        <span class="likes_text">22</span>
+                                    </div>
+                                    <div class="comments">
+                                        <svg class="comments_svg" viewBox="-405.9 238 56.3 54.8" title="Comment">
+                                            <path d="M-391 291.4c0 1.5 1.2 1.7 1.9 1.2 1.8-1.6 15.9-14.6 15.9-14.6h19.3c3.8 0 4.4-.8 4.4-4.5v-31.1c0-3.7-.8-4.5-4.4-4.5h-47.4c-3.6 0-4.4.9-4.4 4.5v31.1c0 3.7.7 4.4 4.4 4.4h10.4v13.5z"></path>
+                                        </svg>
+                                        <span class="comments_text">12</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a> 
+                <a href="assets/Zener Diode.pdf" target="_blank">
+                    <div>
+                        <div class="main">
+                            <div class="card item5" >
+                                <div class="card_back"></div>
+                                <div class="data">
+                                    <div class="text">
+                                        <div class="text_m">Electronics</div>
+                                        <div class="text_s">Zenner Diode</div>
+                                    </div>
+                                </div>
+                                <div class="btns">
+                                    <div class="likes">
+                                        <svg class="likes_svg" viewBox="-2 0 105 92">
+                                            <path d="M85.24 2.67C72.29-3.08 55.75 2.67 50 14.9 44.25 2 27-3.8 14.76 2.67 1.1 9.14-5.37 25 5.42 44.38 13.33 58 27 68.11 50 86.81 73.73 68.11 87.39 58 94.58 44.38c10.79-18.7 4.32-35.24-9.34-41.71Z"></path>
+                                        </svg>
+                                        <span class="likes_text">22</span>
+                                    </div>
+                                    <div class="comments">
+                                        <svg class="comments_svg" viewBox="-405.9 238 56.3 54.8" title="Comment">
+                                            <path d="M-391 291.4c0 1.5 1.2 1.7 1.9 1.2 1.8-1.6 15.9-14.6 15.9-14.6h19.3c3.8 0 4.4-.8 4.4-4.5v-31.1c0-3.7-.8-4.5-4.4-4.5h-47.4c-3.6 0-4.4.9-4.4 4.5v31.1c0 3.7.7 4.4 4.4 4.4h10.4v13.5z"></path>
+                                        </svg>
+                                        <span class="comments_text">12</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a href="assets/BJT and FET.pdf" target="_blank">
+                    <div>
+                        <div class="main">
+                            <div class="card item6" >
+                                <div class="card_back"></div>
+                                <div class="data">
+                                    <div class="text">
+                                        <div class="text_m">Electronics</div>
+                                        <div class="text_s">BJT and FET</div>
+                                    </div>
+                                </div>
+                                <div class="btns">
+                                    <div class="likes">
+                                        <svg class="likes_svg" viewBox="-2 0 105 92">
+                                            <path d="M85.24 2.67C72.29-3.08 55.75 2.67 50 14.9 44.25 2 27-3.8 14.76 2.67 1.1 9.14-5.37 25 5.42 44.38 13.33 58 27 68.11 50 86.81 73.73 68.11 87.39 58 94.58 44.38c10.79-18.7 4.32-35.24-9.34-41.71Z"></path>
+                                        </svg>
+                                        <span class="likes_text">22</span>
+                                    </div>
+                                    <div class="comments">
+                                        <svg class="comments_svg" viewBox="-405.9 238 56.3 54.8" title="Comment">
+                                            <path d="M-391 291.4c0 1.5 1.2 1.7 1.9 1.2 1.8-1.6 15.9-14.6 15.9-14.6h19.3c3.8 0 4.4-.8 4.4-4.5v-31.1c0-3.7-.8-4.5-4.4-4.5h-47.4c-3.6 0-4.4.9-4.4 4.5v31.1c0 3.7.7 4.4 4.4 4.4h10.4v13.5z"></path>
+                                        </svg>
+                                        <span class="comments_text">12</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
             </div>
-            <h1>Question Bank</h1>
+                
+            
+            <!--h1 class="note">Question Bank</h1>
             <div class="notes">
                 <div class="topic">
                     <h3>Mechanical</h3>
@@ -93,9 +242,11 @@
                     <h3>Mechanical</h3>
                     <p>Turbine</p>
                 </div>
-        </div>
-
-        <!-- javascript -->
-        <script src="index.js"></script> <!-- Connecting index.js -->
+            </div-->
+            
+            
+            
+    <!-- javascript -->
+    <script src="index.js"></script> <!-- Connecting index.js -->
 </body>
 </html>

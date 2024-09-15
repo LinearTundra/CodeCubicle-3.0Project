@@ -1,7 +1,13 @@
 
 const SearchText = document.getElementById("Search");
-const searchbutton = document.getElementById("SearchButton")
-searchbutton.addEventListener("click",function(){
-    console.log(SearchText.value)
-    document.getElementById("SearchResultText").textContent = SearchText;
-})
+document.getElementsId("ResponseText").hidden=true;
+
+
+
+function search() {
+    const SearchText = document.getElementById("Search");
+    const searchbutton = document.getElementById("EARCH");
+    console.log(SearchText.value);
+    document.getElementById("SearchResultText").textContent = SearchText.value;
+   document.getElementsId("ResponseText").hidden=false;
+   }
