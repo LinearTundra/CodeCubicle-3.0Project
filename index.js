@@ -1,8 +1,8 @@
 
-let SearchText;
-document.getElementById("SearchResultText").textContent = `No Reults Found For ""`; 
-document.getElementById("SearchButton").onclick =  function(){
-    SearchText = document.getElementById("Search").value;
-    console.log(SearchText);
-}
-document.getElementById("SearchResultText").textContent = `No Reults Found For ""`;
+const SearchText=document.getElementById("Search");
+const searchbutton=document.getElementById("SearchButton")
+searchbutton.addEventListener("click",function(){
+    console.log(SearchText.value)
+})
+
+
