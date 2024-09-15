@@ -5,5 +5,3 @@ searchbutton.addEventListener("click",function(){
     console.log(SearchText.value)
     document.getElementById("SearchResultText").textContent = SearchText;
 })
-
-
